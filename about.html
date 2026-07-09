@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>אודות — M1 Radio · רדיו אחד, הרבה קולות</title>
+<meta name="description" content="M1 Radio — בית לשידורי רדיו חיים 24/7, חלק ממשפחת Moral Together. הכירו את הסיפור שלנו.">
+<link rel="icon" type="image/png" href="assets/logo-crop.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site" id="siteHeader">
+  <div class="topbar">
+    <a class="brand" href="index.html" aria-label="M1 Radio — דף הבית">
+      <img class="logo" src="assets/logo-crop.png" alt="M1 Radio" width="547" height="617">
+    </a>
+    <nav class="tabs" id="mainNav" aria-label="ניווט ראשי">
+      <a href="index.html">דף הבית</a>
+      <a href="stations.html">ערוצים</a>
+      <a href="hosts.html">שדרנים</a>
+      <a href="blog.html">מה חדש</a>
+      <a href="apps.html">אפליקציה</a>
+      <a href="about.html" class="active">אודות</a>
+      <a href="ads.html">פרסום</a>
+    </nav>
+    <div class="head-actions">
+      <button class="cta-mini" id="headerPlay" type="button"><span class="pulse light"></span> LIVE</button>
+      <button class="burger" id="burgerBtn" type="button" aria-label="תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="ניווט נייד">
+    <a href="index.html">דף הבית</a>
+    <a href="stations.html">ערוצים</a>
+    <a href="hosts.html">שדרנים</a>
+    <a href="blog.html">מה חדש</a>
+      <a href="apps.html">אפליקציה</a>
+    <a href="about.html" class="active">אודות</a>
+    <a href="ads.html">פרסום</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ===== PAGE BAND ===== -->
+  <section class="page-band band-about">
+    <div class="wrap">
+      <div class="eyebrow on-dark">מי אנחנו</div>
+      <h1>אודות <span class="hl">M1 Radio</span></h1>
+      <p class="band-sub">רדיו שמלווה אתכם — <span id="bandCount">21</span> ערוצים, שידור חי 24/7.</p>
+    </div>
+    <div class="wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,80 480,0 720,25 C960,50 1200,15 1440,45 L1440,70 L0,70 Z" fill="var(--paper)"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== MISSION + STATS ===== -->
+  <section class="about-sec">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <div class="eyebrow">הסיפור שלנו</div>
+          <h2>רדיו אחד, <span class="hl-accent">הרבה קולות</span></h2>
+          <p>M1 Radio הוא בית לשידורי רדיו חיים, 24 שעות ביממה. אצלנו לא ערוץ אחד — אלא <span id="missionCount">21</span> ערוצים, כל אחד עם השדרן והאופי שלו: מהמוזיקה ועד השיחה.</p>
+          <p>המשימה שלנו פשוטה — להשמיע תוכן חיובי שמלווה אתכם לאורך כל היום: בבית, בעבודה ובדרך. תחנות עם חדשות טובות, מוזיקה לכל מצב רוח וקולות שנעים לחזור אליהם.</p>
+          <p>אנחנו חלק ממשפחת Moral Together, ומאמינים שרדיו הוא לא רק צליל ברקע — הוא קהילה. לכן כל ערוץ אפשר גם לשמוע וגם לצפות בשידור חי, אונליין ובאפליקציה.</p>
+        </div>
+        <div class="media">
+          <img src="assets/placeholders/stations/station-01-radio-team.jpg" alt="צוות באולפן רדיו" loading="lazy">
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="num" id="statStations">21</div><div class="lbl">ערוצים באוויר</div></div>
+        <div class="stat"><div class="num">24/7</div><div class="lbl">שידור חי</div></div>
+        <div class="stat"><div class="num">100%</div><div class="lbl">חינם להאזנה</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALUES ===== -->
+  <section class="tint">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">למה M1</div>
+          <h2>מה אנחנו <span class="hl-accent">עושים</span></h2>
+        </div>
+      </div>
+      <div class="cards three">
+        <article class="pcard">
+          <span class="picon g-purple">🎙️</span>
+          <h3>ערוץ לכל אחד</h3>
+          <p>לכל תחנה שדרן ואופי משלה — ממוזיקה ועד שיחה. תמיד יש ערוץ שמתאים בדיוק לכם.</p>
+        </article>
+        <article class="pcard">
+          <span class="picon g-pink">📻</span>
+          <h3>שידור חי 24/7</h3>
+          <p>האוויר לא שותק. תוכן חי מסביב לשעון, בכל יום ובכל שעה.</p>
+        </article>
+        <article class="pcard">
+          <span class="picon g-sky">📺</span>
+          <h3>רדיו שרואים</h3>
+          <p>לא רק להקשיב — לכל ערוץ יש גם שידור וידאו חי, אונליין ובאפליקציה.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <div class="eyebrow">מוכנים להאזין?</div>
+        <h2>החיים נשמעים <span class="hl-accent">טוב יותר</span></h2>
+        <p>בחרו ערוץ, לחצו פליי — והצטרפו לשידור.</p>
+        <div class="cta-row">
+          <button class="cta primary" id="ctaPlay" type="button">▶ האזינו ל‑LIVE</button>
+          <a class="cta ghost" href="stations.html">לכל הערוצים</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="about">
+  <div class="wrap foot">
+    <div class="fcol">
+      <img class="flogo" src="assets/logo-crop.png" alt="M1 Radio" width="547" height="617">
+      <p>משדרים חיובי · LIVE 24/7<br>תחנות של מוזיקה, קהילה וחדשות טובות.</p>
+    </div>
+    <div class="fcol">
+      <h4>ניווט</h4>
+      <a href="stations.html">ערוצים</a>
+      <a href="hosts.html">שדרנים</a>
+      <a href="blog.html">מה חדש</a>
+      <a href="apps.html">אפליקציה</a>
+      <a href="about.html">אודות</a>
+      <a href="ads.html">פרסום</a>
+    </div>
+    <div class="fcol">
+      <h4>מידע</h4>
+      <a href="privacy-policy.html">מדיניות פרטיות</a>
+      <a href="accessibility.html">הצהרת נגישות</a>
+    </div>
+    <div class="fcol">
+      <h4>צור קשר</h4>
+      <a class="ltr" href="mailto:contact@m1radio.com">contact@m1radio.com</a>
+      <a class="ltr" href="tel:+972501234567">050-123-4567</a>
+      <div class="socials">
+        <a class="ic" href="#" aria-label="פייסבוק">f</a>
+        <a class="ic" href="#" aria-label="אינסטגרם">◎</a>
+        <a class="ic" href="#" aria-label="יוטיוב">▶</a>
+        <a class="ic" href="#" aria-label="וואטסאפ">✆</a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">© M1 Radio <span id="year">2026</span> · כל הזכויות שמורות · Moral Together</div>
+</footer>
+
+<!-- ===== PLAYER DOCK ===== -->
+<div class="dock" id="dock" hidden>
+  <button class="dock-play" id="dockPlay" type="button" aria-label="נגן / השהה">▶</button>
+  <div class="dock-meta">
+    <span class="dock-live" id="dockStatus"><i class="pulse"></i>באוויר</span>
+    <span class="dock-name" id="dockName">רדיו ראשי</span>
+  </div>
+  <div class="eq mini" id="dockEq" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <input class="dock-vol" id="dockVol" type="range" min="0" max="1" step="0.05" value="0.9" aria-label="עוצמת קול">
+  <button class="dock-close" id="dockClose" type="button" aria-label="סגירת הנגן">✕</button>
+</div>
+
+<script src="about.js"></script>
+</body>
+</html>

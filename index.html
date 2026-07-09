@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M1 Radio — משדרים חיובי · שידור חי 24/7</title>
+<meta name="description" content="M1 Radio — 21 תחנות של מוזיקה, קהילה וחדשות טובות. שידור חי 24/7, באתר ובאפליקציה.">
+<meta property="og:title" content="M1 Radio — משדרים חיובי">
+<meta property="og:description" content="21 תחנות בשידור חי 24/7 — מוזיקה, קהילה וחדשות טובות.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/logo-crop.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site" id="siteHeader">
+  <div class="topbar">
+    <a class="brand" href="#top" aria-label="M1 Radio — דף הבית">
+      <img class="logo" src="assets/logo-crop.png" alt="M1 Radio" width="547" height="617">
+    </a>
+    <nav class="tabs" id="mainNav" aria-label="ניווט ראשי">
+      <a href="#top" class="active">דף הבית</a>
+      <a href="stations.html">ערוצים</a>
+      <a href="hosts.html">שדרנים</a>
+      <a href="blog.html">מה חדש</a>
+      <a href="apps.html">אפליקציה</a>
+      <a href="about.html">אודות</a>
+      <a href="ads.html">פרסום</a>
+    </nav>
+    <div class="head-actions">
+      <button class="cta-mini" id="headerPlay" type="button"><span class="pulse light"></span> LIVE</button>
+      <button class="burger" id="burgerBtn" type="button" aria-label="תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="ניווט נייד">
+    <a href="#top" class="active">דף הבית</a>
+    <a href="stations.html">ערוצים</a>
+    <a href="hosts.html">שדרנים</a>
+    <a href="blog.html">מה חדש</a>
+      <a href="apps.html">אפליקציה</a>
+    <a href="about.html">אודות</a>
+    <a href="ads.html">פרסום</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO (вариант с фото-фоном, утверждён 2026-07-09) ===== -->
+  <section class="hero hero-photo">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <img class="hero-logo" src="assets/logo-crop.png" alt="" width="547" height="617">
+        <div class="eyebrow">M1 Radio · משדרים חיובי</div>
+        <h1>רדיו שעושה <span class="hl" style="white-space:nowrap">לכם טוב</span></h1>
+        <p class="hsub">ערוץ ה‑LIVE מהאולפן, ולצידו תחנות של מוזיקה, קהילה וחדשות טובות — 24 שעות ביממה.</p>
+        <div class="cta-row">
+          <a class="cta primary" id="heroPlay" href="stations.html#play=M1radio">▶ האזינו ל‑LIVE</a>
+          <a class="cta ghost" href="stations.html#all">לכל התחנות</a>
+        </div>
+        <ul class="hero-points">
+          <li><span class="ico">🎧</span>לחיצה אחת מכל דפדפן — ואתם בערוץ ה‑LIVE</li>
+          <li><span class="ico">💜</span>תחנה לכל גיל ולכל מצב רוח</li>
+          <li><span class="ico">📱</span>באתר, באפליקציה ובטלוויזיה</li>
+        </ul>
+      </div>
+
+      <div class="hero-stage">
+        <div class="disc">
+          <img class="disc-ph" src="assets/placeholders/people/person-05-smiley-man-podcast.jpg" alt="" aria-hidden="true">
+          <div class="disc-ring" aria-hidden="true"></div>
+          <a class="disc-live" href="stations.html#play=M1radio" aria-label="לצפייה בערוץ הראשי — שידור חי">
+            <span class="pulse"></span> LIVE
+            <span class="eq tiny" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          </a>
+        </div>
+        <span class="chip c1" aria-hidden="true"><i class="dot d-pink"></i>ילדים חדשות טובות</span>
+        <span class="chip c2" aria-hidden="true"><i class="dot d-sky"></i>מורל בעלי החיים</span>
+        <span class="chip c3" aria-hidden="true"><i class="dot d-purple"></i>M1 רוסית</span>
+        <span class="chip c4" aria-hidden="true"><i class="dot d-sun"></i>מורל האימהות והמשפחה</span>
+        <span class="chip live-chip" aria-hidden="true"><i class="pulse"></i>LIVE</span>
+      </div>
+    </div>
+    <div class="wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,80 480,0 720,25 C960,50 1200,15 1440,45 L1440,70 L0,70 Z" fill="var(--lilac)"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== STATIONS ===== -->
+  <section class="tint" id="stations">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow"><span id="stationsCount">21</span>&nbsp;תחנות באוויר</div>
+          <h2>לכל מצב רוח <span class="hl-accent">יש תחנה</span></h2>
+        </div>
+        <p class="sec-note">לחיצה על תחנה — ואתם בשידור.</p>
+      </div>
+      <div class="stations collapsed" id="stationGrid"></div>
+      <div class="stations-more">
+        <button class="cta ghost" id="stationsToggle" type="button">לכל התחנות (<span id="stationsCount2">21</span>) ▾</button>
+      </div>
+    </div>
+    <div class="wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,45 C240,10 480,60 720,35 C960,10 1200,55 1440,25 L1440,70 L0,70 Z" fill="var(--paper)"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED CHANNELS ===== -->
+  <section id="channels">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">המגישים שלנו</div>
+          <h2>לכל ערוץ <span class="hl-accent">יש פנים</span></h2>
+        </div>
+        <p class="sec-note">המגישים הם הלב של הערוצים — הכירו אותם כאן.</p>
+      </div>
+      <div class="cards hosts">
+        <article class="hostcard" data-station="nazeret">
+          <img src="assets/placeholders/people/person-03-woman-host-headset.jpg" alt="מגישת מורל האימהות והמשפחה" loading="lazy">
+          <span class="hc-badge"><i class="pulse light"></i> מתנגן עכשיו</span>
+          <div class="hc-body">
+            <h3>מורל האימהות והמשפחה</h3>
+            <p class="hc-host">בהנחיית · נכריז בקרוב</p>
+            <button class="hc-play" type="button" data-play="nazeret">▶ האזינו לערוץ</button>
+          </div>
+        </article>
+        <article class="hostcard" data-station="kiryat_mochkin">
+          <img src="assets/placeholders/people/person-01-smiling-presenter.jpg" alt="מגישת ילדים חדשות טובות" loading="lazy">
+          <span class="hc-badge"><i class="pulse light"></i> מתנגן עכשיו</span>
+          <div class="hc-body">
+            <h3>ילדים חדשות טובות</h3>
+            <p class="hc-host">בהנחיית · נכריז בקרוב</p>
+            <button class="hc-play" type="button" data-play="kiryat_mochkin">▶ האזינו לערוץ</button>
+          </div>
+        </article>
+        <article class="hostcard" data-station="kiryat_ata">
+          <img src="assets/placeholders/people/person-04-man-podcast-studio.jpg" alt="מגיש מורל ART" loading="lazy">
+          <span class="hc-badge"><i class="pulse light"></i> מתנגן עכשיו</span>
+          <div class="hc-body">
+            <h3>מורל ART</h3>
+            <p class="hc-host">בהנחיית · נכריז בקרוב</p>
+            <button class="hc-play" type="button" data-play="kiryat_ata">▶ האזינו לערוץ</button>
+          </div>
+        </article>
+        <article class="hostcard" data-station="tveria">
+          <img src="assets/placeholders/people/person-02-smiling-influencer.jpg" alt="מגישת מורל בעלי החיים" loading="lazy">
+          <span class="hc-badge"><i class="pulse light"></i> מתנגן עכשיו</span>
+          <div class="hc-body">
+            <h3>מורל בעלי החיים</h3>
+            <p class="hc-host">בהנחיית · נכריז בקרוב</p>
+            <button class="hc-play" type="button" data-play="tveria">▶ האזינו לערוץ</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RADIO TV — тёмный блок с фото-фоном ===== -->
+  <section class="tv-band" id="tv">
+    <div class="wrap tv-grid">
+      <div>
+        <div class="eyebrow on-dark">Radio TV</div>
+        <h2 class="on-dark">רואים את <span class="hl">השידור</span></h2>
+        <p class="on-dark-sub">מצלמות חיות מהאולפן ומהשטח — שידורי הווידאו כבר פועלים באפליקציה, ובקרוב יגיעו גם לכאן.</p>
+        <a class="cta light" href="#apps">להורדת האפליקציה</a>
+      </div>
+      <div class="tv-mock" aria-hidden="true">
+        <div class="tv-screen">
+          <span class="tv-badge">בקרוב באתר</span>
+          <span class="tv-play">▶</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG (заглушка) ===== -->
+  <section class="tint" id="blog">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">הבלוג שלנו</div>
+          <h2>מה חדש <span class="hl-accent">באוויר</span></h2>
+        </div>
+        <span class="soon-badge">בקרוב · תוכן לדוגמה</span>
+      </div>
+      <div class="magazine">
+        <article class="mag-lead">
+          <div class="mimg"><img src="assets/placeholders/stations/station-01-radio-team.jpg" alt="" loading="lazy"></div>
+          <div class="mbody">
+            <span class="mtag">מאחורי הקלעים</span>
+            <h3>איך נולדת תחנה חדשה ב‑M1</h3>
+            <p>הצצה לאולפן: מהרעיון הראשון ועד הרגע שהערוץ עולה לאוויר.</p>
+          </div>
+        </article>
+        <div class="mag-list">
+          <article class="mag-item">
+            <div class="mimg"><img src="assets/placeholders/stations/station-06-women-broadcasting.jpg" alt="" loading="lazy"></div>
+            <div class="mi-body">
+              <span class="mtag">ראיון</span>
+              <h3>שיחה עם המגישים שמאחורי הערוצים</h3>
+            </div>
+          </article>
+          <article class="mag-item">
+            <div class="mimg"><img src="assets/placeholders/stations/station-07-mother-daughter-music.jpg" alt="" loading="lazy"></div>
+            <div class="mi-body">
+              <span class="mtag">קהילה</span>
+              <h3>הסיפורים והברכות ששלחתם השבוע</h3>
+            </div>
+          </article>
+          <article class="mag-item">
+            <div class="mimg"><img src="assets/placeholders/stations/station-08-girl-headphones.jpg" alt="" loading="lazy"></div>
+            <div class="mi-body">
+              <span class="mtag">מוזיקה</span>
+              <h3>הפלייליסט שמלווה את הבוקר</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPS ===== -->
+  <section id="apps">
+    <div class="wrap">
+      <div class="apps-band">
+        <div>
+          <div class="eyebrow">אנדרואיד · iOS · טלוויזיה · דפדפן</div>
+          <h2>קחו את M1 <span class="hl-accent">לכל מקום</span></h2>
+          <p class="sec-note">הורידו את האפליקציה — או האזינו ישר מהדפדפן, על כל מסך.</p>
+          <a class="linkbtn" href="apps.html">לעמוד האפליקציה ›</a>
+        </div>
+        <div class="store-row">
+          <a class="store web" href="https://radio.moraltogether.com" target="_blank" rel="noopener" aria-label="אפליקציית הרשת">🌐 אפליקציית הרשת<small>ישר מהדפדפן</small></a>
+          <a class="store" href="#" aria-label="App Store">App Store<small>להורדה</small></a>
+          <a class="store" href="#" aria-label="Google Play">Google Play<small>להורדה</small></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ADS ===== -->
+  <section class="tint" id="ads">
+    <div class="wrap ads-grid">
+      <div>
+        <div class="eyebrow">פרסום</div>
+        <h2>המסר שלכם, <span class="hl-accent">בקול שלנו</span></h2>
+        <p class="sec-note">קמפיינים בשידור החי, בערוצי הווידאו ובאפליקציה. ספרו לנו על העסק — ונחזור אליכם עם הצעה.</p>
+      </div>
+      <form class="card-form compact" id="adsForm" novalidate>
+        <input type="text" name="company" placeholder="שם העסק" aria-label="שם העסק" required>
+        <div class="frow">
+          <input type="text" name="name" placeholder="איש קשר" aria-label="איש קשר" required>
+          <input type="tel" name="phone" placeholder="טלפון" aria-label="טלפון" class="ltr" required>
+        </div>
+        <button class="cta primary wide" type="submit">ספרו לנו</button>
+        <p class="form-success" hidden>תודה! נחזור אליכם בהקדם.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="about">
+  <div class="wrap foot">
+    <div class="fcol">
+      <img class="flogo" src="assets/logo-crop.png" alt="M1 Radio" width="547" height="617">
+      <p>משדרים חיובי · LIVE 24/7<br>תחנות של מוזיקה, קהילה וחדשות טובות.</p>
+    </div>
+    <div class="fcol">
+      <h4>ניווט</h4>
+      <a href="stations.html">ערוצים</a>
+      <a href="hosts.html">שדרנים</a>
+      <a href="blog.html">מה חדש</a>
+      <a href="apps.html">אפליקציה</a>
+      <a href="about.html">אודות</a>
+      <a href="ads.html">פרסום</a>
+    </div>
+    <div class="fcol">
+      <h4>מידע</h4>
+      <a href="privacy-policy.html">מדיניות פרטיות</a>
+      <a href="accessibility.html">הצהרת נגישות</a>
+    </div>
+    <div class="fcol">
+      <h4>צור קשר</h4>
+      <a class="ltr" href="mailto:contact@m1radio.com">contact@m1radio.com</a>
+      <a class="ltr" href="tel:+972501234567">050-123-4567</a>
+      <div class="socials">
+        <a class="ic" href="#" aria-label="פייסבוק">f</a>
+        <a class="ic" href="#" aria-label="אינסטגרם">◎</a>
+        <a class="ic" href="#" aria-label="יוטיוב">▶</a>
+        <a class="ic" href="#" aria-label="וואטסאפ">✆</a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">© M1 Radio <span id="year">2026</span> · כל הזכויות שמורות · Moral Together</div>
+</footer>
+
+<!-- ===== PLAYER DOCK ===== -->
+<div class="dock" id="dock" hidden>
+  <button class="dock-play" id="dockPlay" type="button" aria-label="נגן / השהה">▶</button>
+  <div class="dock-meta">
+    <span class="dock-live" id="dockStatus"><i class="pulse"></i>באוויר</span>
+    <span class="dock-name" id="dockName">רדיו ראשי</span>
+  </div>
+  <div class="eq mini" id="dockEq" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <input class="dock-vol" id="dockVol" type="range" min="0" max="1" step="0.05" value="0.9" aria-label="עוצמת קול">
+  <button class="dock-close" id="dockClose" type="button" aria-label="סגירת הנגן">✕</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
