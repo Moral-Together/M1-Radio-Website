@@ -15,7 +15,7 @@ let POSTS = [
   {
     slug: "new-station-launch",
     title: "איך נולדת תחנה חדשה ב-M1",
-    excerpt: "הצצה לאולפן: מהרעיון הראשון, דרך בחירת המוזיקה והשדרן — ועד הרגע שהערוץ עולה לאוויר.",
+    excerpt: "הצצה לאולפן: מהרעיון הראשון, דרך בחירת המוזיקה והשדרן ועד הרגע שהערוץ עולה לאוויר.",
     category: "מאחורי הקלעים",
     publishedAt: "2026-07-08",
     image: "stations/station-01-radio-team.jpg",
@@ -39,7 +39,7 @@ let POSTS = [
   {
     slug: "morning-playlist",
     title: "הפלייליסט שמלווה את הבוקר",
-    excerpt: "השירים שפותחים את היום באולפן — ולמה דווקא הם. פלייליסט הבוקר של הערוץ הראשי.",
+    excerpt: "השירים שפותחים את היום באולפן והסיבות שבגללן בחרנו דווקא בהם. הכירו את פלייליסט הבוקר של הערוץ הראשי.",
     category: "פלייליסט",
     publishedAt: "2026-07-03",
     image: "stations/station-08-girl-headphones.jpg",
@@ -47,7 +47,7 @@ let POSTS = [
   {
     slug: "studio-day",
     title: "סיור באולפן: כך נראה יום שידור",
-    excerpt: "מהקפה של הבוקר ועד השיר האחרון של הלילה — יום אחד מאחורי הקלעים של M1.",
+    excerpt: "מהקפה של הבוקר ועד השיר האחרון של הלילה. הצטרפו ליום אחד מאחורי הקלעים של M1.",
     category: "מאחורי הקלעים",
     publishedAt: "2026-07-01",
     image: "backgrounds/bg-02-home-podcast-studio.jpg",
@@ -63,7 +63,7 @@ let POSTS = [
   {
     slug: "summer-songs",
     title: "הקהילה בחרה: השירים של הקיץ",
-    excerpt: "ביקשנו — וקיבלנו. השירים שאתם הכי אוהבים לשמוע בקיץ, לפי ההצבעות שלכם.",
+    excerpt: "ביקשנו וקיבלנו. אלה השירים שאתם הכי אוהבים לשמוע בקיץ, לפי ההצבעות שלכם.",
     category: "קהילה",
     publishedAt: "2026-06-25",
     image: "stations/station-11-couple-music.jpg",

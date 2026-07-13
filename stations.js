@@ -214,7 +214,7 @@ function selectStation(id, autoplay) {
   video.poster = photoFor(current);
   stageMsg.hidden = true;
   if (autoplay) startPlayback();
-  else setStatus("לחצו פליי — ואתם בשידור", false);
+  else setStatus("לחצו פליי כדי להצטרף לשידור", false);
   syncTiles();
 }
 
@@ -240,13 +240,13 @@ function playVideo() {
     hls.on(Hls.Events.ERROR, (e, data) => {
       if (data.fatal) {
         isPlaying = false;
-        showMsg("שידור הווידאו לא זמין כרגע — נסו את מצב הרדיו 📻");
+        showMsg("שידור הווידאו לא זמין כרגע. נסו לעבור למצב רדיו 📻");
         setStatus("הווידאו לא זמין", false);
         syncTiles();
       }
     });
   } else {
-    showMsg("הדפדפן לא תומך בווידאו חי — עברו למצב רדיו 📻");
+    showMsg("הדפדפן לא תומך בווידאו חי. עברו למצב רדיו 📻");
     return;
   }
   video.volume = parseFloat(vol.value);
@@ -254,7 +254,7 @@ function playVideo() {
   // тогда оставляем станцию выбранной и просим нажать пליי
   video.play().catch(() => {
     isPlaying = false;
-    setStatus("לחצו פליי — ואתם בשידור", false);
+    setStatus("לחצו פליי כדי להצטרף לשידור", false);
     syncTiles();
   });
 }
@@ -267,7 +267,7 @@ function playRadio() {
   audio.src = findStation(current).radio;
   audio.volume = parseFloat(vol.value);
   audio.play().catch((e) =>
-    setStatus(e && e.name === "NotAllowedError" ? "לחצו פליי — ואתם בשידור" : "התחנה לא זמינה כרגע", false)
+    setStatus(e && e.name === "NotAllowedError" ? "לחצו פליי כדי להצטרף לשידור" : "התחנה לא זמינה כרגע", false)
   );
 }
 
@@ -333,7 +333,7 @@ shareBtn.addEventListener("click", () => {
   const s = findStation(current || defaultStation().id);
   const url = location.href.split("#")[0] + "#" + s.id;
   if (navigator.share) {
-    navigator.share({ title: "M1 Radio — " + s.name, url: url }).catch(() => {});
+    navigator.share({ title: "M1 Radio · " + s.name, url: url }).catch(() => {});
   } else if (navigator.clipboard) {
     navigator.clipboard.writeText(url).then(() => {
       shareBtn.textContent = "✓ הועתק";

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>M1 Radio — משדרים חיובי · שידור חי 24/7</title>
-<meta name="description" content="M1 Radio — 21 תחנות של מוזיקה, קהילה וחדשות טובות. שידור חי 24/7, באתר ובאפליקציה.">
-<meta property="og:title" content="M1 Radio — משדרים חיובי">
-<meta property="og:description" content="21 תחנות בשידור חי 24/7 — מוזיקה, קהילה וחדשות טובות.">
+<title>M1 Radio · משדרים חיובי · שידור חי 24/7</title>
+<meta name="description" content="M1 Radio מציע 21 תחנות של מוזיקה, קהילה וחדשות טובות בשידור חי 24/7, באתר ובאפליקציה.">
+<meta property="og:title" content="M1 Radio · משדרים חיובי">
+<meta property="og:description" content="21 תחנות של מוזיקה, קהילה וחדשות טובות בשידור חי 24/7.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://radio.moraltogether.com/">
 <meta property="og:site_name" content="M1 Radio">
@@ -21,13 +21,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="page-transitions.js"></script>
 </head>
 <body>
 
 <!-- ===== HEADER ===== -->
 <header class="site" id="siteHeader">
   <div class="topbar">
-    <a class="brand" href="#top" aria-label="M1 Radio — דף הבית">
+    <a class="brand" href="#top" aria-label="M1 Radio · דף הבית">
       <img class="logo" src="assets/logo-crop.png" alt="M1 Radio" width="547" height="617">
     </a>
     <nav class="tabs" id="mainNav" aria-label="ניווט ראשי">
@@ -66,13 +67,13 @@
         <img class="hero-logo" src="assets/logo-crop.png" alt="" width="547" height="617">
         <div class="eyebrow">M1 Radio · משדרים חיובי</div>
         <h1>רדיו שעושה <span class="hl" style="white-space:nowrap">לכם טוב</span></h1>
-        <p class="hsub">ערוץ ה‑LIVE מהאולפן, ולצידו תחנות של מוזיקה, קהילה וחדשות טובות — 24 שעות ביממה.</p>
+        <p class="hsub">ערוץ LIVE מהאולפן ולצידו תחנות של מוזיקה, קהילה וחדשות טובות המשדרות 24 שעות ביממה.</p>
         <div class="cta-row">
-          <a class="cta primary" id="heroPlay" href="stations.html#play=M1radio">▶ האזינו ל‑LIVE</a>
+          <a class="cta primary" id="heroPlay" href="stations.html#play=M1radio">▶ האזינו לשידור החי</a>
           <a class="cta ghost" href="stations.html#all">לכל התחנות</a>
         </div>
         <ul class="hero-points">
-          <li><span class="ico">🎧</span>לחיצה אחת מכל דפדפן — ואתם בערוץ ה‑LIVE</li>
+          <li><span class="ico">🎧</span>לחיצה אחת מכל דפדפן מחברת אתכם לערוץ LIVE</li>
           <li><span class="ico">💜</span>תחנה לכל גיל ולכל מצב רוח</li>
           <li><span class="ico">📱</span>באתר, באפליקציה ובטלוויזיה</li>
         </ul>
@@ -82,7 +83,7 @@
         <div class="disc">
           <img class="disc-ph" src="assets/placeholders/people/person-05-smiley-man-podcast.jpg" alt="" aria-hidden="true">
           <div class="disc-ring" aria-hidden="true"></div>
-          <a class="disc-live" href="stations.html#play=M1radio" aria-label="לצפייה בערוץ הראשי — שידור חי">
+          <a class="disc-live" href="stations.html#play=M1radio" aria-label="לצפייה בשידור החי של הערוץ הראשי">
             <span class="pulse"></span> LIVE
             <span class="eq tiny" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
           </a>
@@ -107,7 +108,7 @@
           <div class="eyebrow"><span id="stationsCount">21</span>&nbsp;תחנות באוויר</div>
           <h2>לכל מצב רוח <span class="hl-accent">יש תחנה</span></h2>
         </div>
-        <p class="sec-note">לחיצה על תחנה — ואתם בשידור.</p>
+        <p class="sec-note">לחיצה על תחנה מחברת אתכם לשידור.</p>
       </div>
       <div class="stations collapsed" id="stationGrid"></div>
       <div class="stations-more">
@@ -127,7 +128,7 @@
           <div class="eyebrow">המגישים שלנו</div>
           <h2>לכל ערוץ <span class="hl-accent">יש פנים</span></h2>
         </div>
-        <p class="sec-note">המגישים הם הלב של הערוצים — הכירו אותם כאן.</p>
+        <p class="sec-note">המגישים הם הלב של הערוצים. הכירו אותם כאן.</p>
       </div>
       <div class="cards hosts">
         <article class="hostcard" data-station="nazeret">
@@ -176,7 +177,7 @@
       <div>
         <div class="eyebrow on-dark">Radio TV</div>
         <h2 class="on-dark">רואים את <span class="hl">השידור</span></h2>
-        <p class="on-dark-sub">מצלמות חיות מהאולפן ומהשטח — שידורי הווידאו כבר פועלים באפליקציה, ובקרוב יגיעו גם לכאן.</p>
+        <p class="on-dark-sub">מצלמות חיות מהאולפן ומהשטח. שידורי הווידאו כבר פועלים באפליקציה ובקרוב יגיעו גם לכאן.</p>
         <a class="cta light" href="#apps">להורדת האפליקציה</a>
       </div>
       <div class="tv-mock" aria-hidden="true">
@@ -203,7 +204,7 @@
           <div class="mimg"><img src="assets/placeholders/stations/station-01-radio-team.jpg" alt="" loading="lazy"></div>
           <div class="mbody">
             <span class="mtag">מאחורי הקלעים</span>
-            <h3>איך נולדת תחנה חדשה ב‑M1</h3>
+            <h3>כך נולדת תחנה חדשה ברדיו M1</h3>
             <p>הצצה לאולפן: מהרעיון הראשון ועד הרגע שהערוץ עולה לאוויר.</p>
           </div>
         </article>
@@ -241,7 +242,7 @@
         <div>
           <div class="eyebrow">אנדרואיד · iOS · טלוויזיה · דפדפן</div>
           <h2>קחו את M1 <span class="hl-accent">לכל מקום</span></h2>
-          <p class="sec-note">הורידו את האפליקציה — או האזינו ישר מהדפדפן, על כל מסך.</p>
+          <p class="sec-note">הורידו את האפליקציה או האזינו ישר מהדפדפן, על כל מסך.</p>
           <a class="linkbtn" href="apps.html">לעמוד האפליקציה ›</a>
         </div>
         <div class="store-row">
@@ -259,7 +260,7 @@
       <div>
         <div class="eyebrow">פרסום</div>
         <h2>המסר שלכם, <span class="hl-accent">בקול שלנו</span></h2>
-        <p class="sec-note">קמפיינים בשידור החי, בערוצי הווידאו ובאפליקציה. ספרו לנו על העסק — ונחזור אליכם עם הצעה.</p>
+        <p class="sec-note">קמפיינים בשידור החי, בערוצי הווידאו ובאפליקציה. ספרו לנו על העסק ונחזור אליכם עם הצעה.</p>
       </div>
       <form class="card-form compact" id="adsForm" novalidate>
         <input type="text" name="company" placeholder="שם העסק" aria-label="שם העסק" required>

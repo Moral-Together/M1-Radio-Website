@@ -24,9 +24,11 @@
   --shadow-soft: 0 6px 24px rgba(39, 26, 61, .07);
   --shadow-lift: 0 14px 36px rgba(39, 26, 61, .13);
   --header-h: 76px;
+  --ease-out-quart: cubic-bezier(.25, 1, .5, 1);
+  --ease-out-quint: cubic-bezier(.22, 1, .36, 1);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scrollbar-gutter: stable; }
 
 body {
   font-family: "Rubik", "Assistant", Arial, sans-serif;
@@ -99,12 +101,32 @@ header.site {
 .brand { display: flex; align-items: center; }
 .logo { height: 56px; width: auto; }
 
-nav.tabs { display: flex; gap: 4px; }
+nav.tabs { display: flex; gap: 4px; position: relative; isolation: isolate; }
 nav.tabs a {
+  position: relative; z-index: 1;
   font-size: 16px; font-weight: 600; color: var(--muted);
-  padding: 9px 18px; border-radius: 999px; transition: .18s;
+  padding: 9px 18px; border-radius: 999px;
+  transition: color 180ms var(--ease-out-quart), background-color 180ms var(--ease-out-quart);
 }
-nav.tabs a:hover { color: var(--purple); background: var(--lilac); }
+nav.tabs a:hover { color: var(--purple); background: rgba(124, 58, 237, .07); }
+nav.tabs a.active:hover { background: transparent; }
+nav.tabs a:focus-visible { outline: 2px solid var(--pink); outline-offset: 2px; }
+
+.nav-indicator {
+  position: absolute; top: 0; left: 0; z-index: 0;
+  width: 1px; height: 1px; border-radius: 999px;
+  pointer-events: none; opacity: 0;
+  background: linear-gradient(110deg, rgba(229, 52, 143, .13), rgba(124, 58, 237, .15));
+  box-shadow: inset 0 0 0 1px rgba(124, 58, 237, .08);
+}
+.nav-indicator.is-visible { opacity: 1; }
+.nav-indicator.is-animated {
+  transition:
+    transform 320ms var(--ease-out-quint),
+    width 320ms var(--ease-out-quint),
+    height 220ms var(--ease-out-quart),
+    opacity 160ms ease-out;
+}
 
 .head-actions { display: flex; align-items: center; gap: 12px; }
 .cta-mini {
@@ -124,6 +146,24 @@ nav.tabs a:hover { color: var(--purple); background: var(--lilac); }
 .mobile-nav a { padding: 12px 4px; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--line); }
 .mobile-nav a:last-child { border-bottom: none; }
 header.site.nav-open .mobile-nav { display: flex; }
+
+/* Page transitions keep the header stable while the document changes. */
+html.motion-enabled main,
+html.motion-enabled body > footer {
+  opacity: 0;
+  transition: opacity 280ms var(--ease-out-quart);
+}
+html.motion-enabled.page-ready main,
+html.motion-enabled.page-ready body > footer {
+  opacity: 1;
+}
+html.motion-enabled.page-leaving main,
+html.motion-enabled.page-leaving body > footer {
+  opacity: 0;
+  transition-duration: 120ms;
+  transition-timing-function: ease-in;
+  pointer-events: none;
+}
 
 /* ==========================================================================
    HERO
@@ -614,8 +654,11 @@ body.dock-open main { padding-bottom: 96px; }
 /* ==========================================================================
    СТРАНИЦА תחנות — «театр»-плеер
    ========================================================================== */
-nav.tabs a.active { color: var(--purple); background: var(--lilac); }
-.mobile-nav a.active { color: var(--purple); }
+nav.tabs a.active { color: var(--purple-deep); background: transparent; }
+.mobile-nav a.active {
+  color: var(--purple-deep); background: var(--lilac);
+  padding-inline: 12px; border-radius: 8px;
+}
 
 .theater-sec { padding: 48px 0 80px; }
 .theater {
@@ -707,6 +750,12 @@ nav.tabs a.active { color: var(--purple); background: var(--lilac); }
   .eq span, .chip, .pulse { animation: none !important; }
   .eq span { transform: scaleY(.6); }
   * { transition-duration: .01ms !important; }
+  html.motion-enabled main,
+  html.motion-enabled body > footer {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .nav-indicator { transition: none !important; }
 }
 
 /* ==========================================================================
